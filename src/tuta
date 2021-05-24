@@ -1,0 +1,168 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+
+
+
+
+// function Comment(props) {
+//     return <div>
+//         <div className="NameUser"><h1>{props.NameUserCooment}</h1></div>
+//         <div className="text"><h1>{props.TextUserCoomenr}</h1></div>
+//         <div className="img">
+//             <img src={props.src}
+//                 alt={props.NameUserCooment}>
+//             </img>
+//         </div>
+//     </div>
+// }
+
+// const comment = {
+
+//     NameUser: "asalef",
+//     TextUser: "hello welcome",
+//     imgSrc:  "https://placekitten.com/g/64/64",
+//     imgAlt: "asi"
+//     // NameUser :props.NameUserCooment,
+//     // TextUser : props.TextUserCoomenr
+// }
+
+
+// ReactDOM.render(<Comment NameUserCooment={comment.NameUser} TextUserCoomenr={comment.TextUser} src={comment.imgSrc} alt={comment.imgAlt} />, document.getElementById('root'));
+
+function Comment(props){
+    return <div>
+        <div className="NameUser"><h1>{props.Username} </h1></div>
+        <div className="CommentUser"><h2> {props.CommentUser}</h2></div>
+        <div className="ImgUser"><img src={props.ImgUser}></img></div>
+    </div>
+}
+
+const comment = {
+    Username : "Asalef",
+    CommentUser: "Welcome to my Website",
+    ImgUser : "https://placekitten.com/g/64/64"
+
+}
+const PersonDetails = ({name,lastName,phone,img})=>{
+return <div>
+    <div className="personName"><h1>{name}</h1></div>
+    <div className="personLastName"><h2>{lastName}</h2></div>
+    <div className="personLastName"><h3>{phone}</h3></div>
+    <div className="personImg"><h3><img src={img}></img></h3></div>
+
+</div>
+}
+let i = 0
+const AryyPhoto = ["https://images.unsplash.com/photo-1498598457418-36ef20772bb9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60","https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dmlld3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60"]
+
+const PersonInformation = {
+PersonUserName: "Asalef  Devoloper",
+PersonUserLastName: "Alena/Arage",
+PersonUserPhone: "054",
+PersonUserImg:AryyPhoto[1]
+}
+setInterval(<PersonInformation/>,1000)
+const Allcom =()=>{
+    return <div>  
+        <div className="Comment">
+         <Comment Username ={comment.Username}  CommentUser={comment.CommentUser} ImgUser={comment.ImgUser}/>
+        </div>
+        <div>
+            <PersonDetails name={PersonInformation.PersonUserName} lastName={PersonInformation.PersonUserLastName} phone={PersonInformation.PersonUserPhone} img={PersonInformation.PersonUserImg} />
+        </div>
+        
+         </div>
+}
+
+ReactDOM.render(<Allcom/>  ,document.getElementById('root'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+
+const Card = ({ ThePlain, HouersActive, DateActive }) => {
+    return (
+
+        <div>
+            <div class="card" >
+                <div class="card-body">
+                    <h5 class="card-title">TheActiveIs {ThePlain}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">The Hours is  {HouersActive}</h6>
+                    <div><img src="https://previews.123rf.com/images/yupiramos/yupiramos1705/yupiramos170504782/77474656-time-clock-kawaii-character-vector-illustration-design-.jpg"></img> </div>
+                    <p class="card-text">DateActive {DateActive}.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+let ThePlain = prompt("what The plain ")
+let HouersActive = prompt("HouersActive ")
+let DateActive = prompt("DateActive ")
+
+// let ThePlain = prompt("what The plain ")
+// let HouersActive = prompt("HouersActive ")
+// let DateActive = prompt("DateActive ")
+
+function Mybutton() {
+    <button id="ButtonInput" onClick=""></button>
+}
+Mybutton()
+const ResultPlayer = {
+    ThePlain: ThePlain,
+    HouersActive: HouersActive,
+    DateActive: DateActive,
+}
+
+
+const Allcom = () => {
+    return <div>
+        <Card ThePlain={ResultPlayer.ThePlain} HouersActive={ResultPlayer.HouersActive} DateActive={ResultPlayer.DateActive} />
+    </div>
+}
+
+ReactDOM.render(<Allcom />, document.getElementById('root'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
